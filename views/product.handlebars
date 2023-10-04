@@ -1,0 +1,44 @@
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->
+  <header>
+  <div class="header-container">
+    <a href="/">
+      <h1 class="logo">Music Shop🎸</h1>
+    </a>
+    <!-- replace with cartCount -->
+    {{cartCount}}
+  </div>
+</header>
+<main>
+  <section id="product-container">
+    <!-- replace with product image and name -->
+    {{product image and name}}
+    <!-- replace form action id # with product id -->
+      {{product id}}
+        <!-- replace with product name -->
+        {{product name}}
+        <!-- replace with product description -->
+        {{product description}}
+        <!-- replace with product price -->
+        {{product price}}
+        <label for="quantity-input">
+          Quantity
+    <!-- replace max input attribute with quantity -->
+          <input
+            name="quantity"
+            id="quantity-input"
+            type="number"
+            min="1"
+            value="1"
+            {{quantity}} />
+        </label>
+        <button>Add to Cart</button>
+      </form>
+  </section>
+  <a href="/" id="returnToStore">Return to Store Page</a>
+</main>
+<footer>
+  <p>&copy; Music Shop</p>
+</footer>
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->

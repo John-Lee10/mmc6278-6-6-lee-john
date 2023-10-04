@@ -1,0 +1,63 @@
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->
+  <header>
+  <div class="header-container">
+    <a href="/">
+      <h1 class="logo">Music Shop🎸</h1>
+    </a>
+  </div>
+</header>
+<main>
+  <h2>Cart</h2>
+  <p>
+    <a href="/">Return to Store Page</a>
+  </p>
+  <section id="cart">
+    <div class="cart-items">
+<!-- TODO: 👇Use a handlebars each helper to loop over cart items👇 -->
+      {{#each cart-items}}
+        <div class="cart-item">
+    <!-- replace with inventoryId -->
+          <a
+            {{inventoryId}}
+    <!-- replace with product image -->
+            {{product image}}
+            <div>
+    <!-- replace with product name and price -->
+              {{product name and price}}
+            </div>
+          </a>
+          <div class="cart-item-subtotal">
+            <div class="cart-item-controls">
+              <label>
+                Quantity
+<!-- replace with cart id, set max to inventoryQuantity, value to quantity -->
+                <input
+                  {{cart id, set max to inventoryQuantity, value to quantity}}
+              </label>
+              <!-- replace with cart id -->
+              <button
+                {{cart id}}
+              </button>
+            </div>
+<!-- replace with calculatedPrice -->
+            {{calculatedPrice}}
+          </div>
+        </div>
+        <hr />
+      {{/each}}
+<!-- TODO: 👆Use a handlebars each helper to loop over cart items👆 -->
+      <div class="cart-total">
+        <p>Total:</p>
+<!-- TODO: Replace with cart total -->
+        {{cart-total}}
+      </div>
+      <button id="emptyCart">Empty Cart</button>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>&copy; Music Shop</p>
+</footer>
+<!-- 👇Remove this markup when converting to a handlebars template 👇 -->
+<!-- 👆Remove this markup when converting to a handlebars template👆 -->
