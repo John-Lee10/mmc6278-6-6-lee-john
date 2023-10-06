@@ -6,21 +6,21 @@
       <h1 class="logo">Music Shop🎸</h1>
     </a>
     <!-- replace with cartCount -->
-    {{cartCount}}
+    <a href="/cart" class="cart-link">Cart ({{cartCount}})</a>
   </div>
 </header>
 <main>
   <section id="product-container">
     <!-- replace with product image and name -->
-    {{product image and name}}
+    <img src={{product image}} alt={{product name}}/>
     <!-- replace form action id # with product id -->
-      {{product id}}
+      <form method="POST" action={{product id}}>
         <!-- replace with product name -->
-        {{product name}}
+        <h2>{{product name}}</h2>
         <!-- replace with product description -->
-        {{product description}}
+        <p>{{product description}}</p>
         <!-- replace with product price -->
-        {{product price}}
+        <p>{{product price}}</p>
         <label for="quantity-input">
           Quantity
     <!-- replace max input attribute with quantity -->
@@ -30,7 +30,7 @@
             type="number"
             min="1"
             value="1"
-            {{quantity}} />
+            max={{quantity}}/>
         </label>
         <button>Add to Cart</button>
       </form>

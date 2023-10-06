@@ -15,16 +15,18 @@
   <section id="cart">
     <div class="cart-items">
 <!-- TODO: 👇Use a handlebars each helper to loop over cart items👇 -->
-      {{#each cart-items}}
+{{#each cart-items}}
         <div class="cart-item">
     <!-- replace with inventoryId -->
           <a
-            {{inventoryId}}
+            href={{inventoryId}}
+            class="cart-item-info">
     <!-- replace with product image -->
-            {{product image}}
+            <img src={{product image}} alt="Stratocaster" />
             <div>
     <!-- replace with product name and price -->
-              {{product name and price}}
+              <p>{{product name}}</p>
+              <p>{{product price}}</p>
             </div>
           </a>
           <div class="cart-item-subtotal">
@@ -33,24 +35,30 @@
                 Quantity
 <!-- replace with cart id, set max to inventoryQuantity, value to quantity -->
                 <input
-                  {{cart id, set max to inventoryQuantity, value to quantity}}
+                  data-cart-id= {{cart id}}
+                  type="number"
+                  min="0"
+                  max={{inventoryQuantity}}
+                  value={{quantity}} />
               </label>
               <!-- replace with cart id -->
               <button
-                {{cart id}}
+                class="remove-from-cart"
+                data-cart-id={{cart id}}>
+                Remove
               </button>
             </div>
 <!-- replace with calculatedPrice -->
-            {{calculatedPrice}}
+            <p>{{calculatedPrice}}</p>
           </div>
         </div>
         <hr />
-      {{/each}}
+{{/each}}
 <!-- TODO: 👆Use a handlebars each helper to loop over cart items👆 -->
       <div class="cart-total">
         <p>Total:</p>
 <!-- TODO: Replace with cart total -->
-        {{cart-total}}
+        <p>{{cart total}}</p>
       </div>
       <button id="emptyCart">Empty Cart</button>
     </div>
