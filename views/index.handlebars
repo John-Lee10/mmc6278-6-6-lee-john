@@ -13,18 +13,18 @@
     <h2>Items for Sale</h2>
     <section id="saleItems">
 <!-- TODO: 👇Use a handlebars each helper to loop over inventory items👇 -->
-{{#each saleItems}}
+{{#each this}}
       <!-- replace with product id -->
-      <a href={{product id}} class="sale-item">
+      <a href={{id}} class="sale-item">
         <div class="item-img-container">
           <!-- replace with product image and name -->
-          <img src={{product image}} alt={{product name}} />
+          <img src={{image}} alt={{name}} />
           <!-- replace with product description -->
-          <p>{{product description}}</p>
+          <p>{{description}}</p>
         </div>
   <!-- replace with product name and price -->
-        <p>{{product name}}</p>
-        <p>{{product price}}</p>
+        <p>{{name}}</p>
+        <p>{{price}}</p>
       </a>
 {{/each}}
 <!-- TODO: 👆Use a handlebars each helper to loop over inventory items👆 -->

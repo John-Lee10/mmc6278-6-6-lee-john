@@ -42,7 +42,7 @@ router.get('/cart', async (req, res) => {
     .toFixed(2)
 
   // TODO: Convert the response below to render a handlebars template
-  res.render(path.join(__dirname, '../views/cart.handlerbars'))
+  res.render(path.join(__dirname, '../views/cart.handlebars'))
 })
 
 module.exports = router
